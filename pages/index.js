@@ -1,13 +1,15 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import cn from "classnames";
+
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [sidebarActive, setSidebarActive] = useState(false);
   const [activePage, setActivePage] = useState("");
+  const [sidebarActive, setSidebarActive] = useState(false);
 
   useEffect(() => {
     const sidebarBtn = document.querySelector("[data-sidebar-btn]");
@@ -73,7 +75,7 @@ export default function Home() {
   */}
       <link
         rel="shortcut icon"
-        href="./assets/images/logo-A - Edited.png"
+        href="/assets/images/logo-A - Edited.png"
         type="image/x-icon"
       />
       {/*
@@ -93,7 +95,11 @@ export default function Home() {
         <aside className="sidebar" data-sidebar="">
           <div className="sidebar-info">
             <figure className="avatar-box">
-              <img src="aayush-avatar.png" alt="Aayush Mehta" width={80} />
+              <img
+                src="/assets/images/aayush-avatar.png"
+                alt="Aayush Mehta"
+                width={80}
+              />
             </figure>
             <div className="info-content">
               <h1 className="name" title="Richard hanrick">
@@ -322,32 +328,34 @@ export default function Home() {
                 <div className="icon-box">
                   <ion-icon name="book-outline" />
                 </div>
-                <h3 className="h3">Experience</h3>
+                <h3 className={cn("h3")}>Experience</h3>
               </div>
-              <ol className="timeline-list">
+              <ol className={cn("timeline-list")}>
                 {/* <li class="timeline-item">
-          <h4 class="h4 timeline-item-title">CTO</h4>
+                  <h4 class="h4 timeline-item-title">CTO</h4>
 
-          <h5>BrickByBit</h5>
-          <span>June, 2023 - Present</span>
+                  <h5>BrickByBit</h5>
+                  <span>June, 2023 - Present</span>
 
-          <p class="timeline-text">Web Developmnent Company</p>
-        </li> */}
-                <li className="timeline-item">
-                  <h4 className="h4 timeline-item-title">Frontend Developer</h4>
+                  <p class="timeline-text">Web Developmnent Company</p>
+                </li> */}
+                <li className={cn("timeline-item")}>
+                  <h4 className={cn("h4 timeline-item-title")}>
+                    Frontend Developer
+                  </h4>
                   <h5>Doorpix</h5>
                   <span>Jan, 2023 - Present</span>
-                  <p className="timeline-text">
+                  <p className={cn("timeline-text")}>
                     Develop web applications based on HTML, CSS, JS, React JS
                   </p>
                 </li>
-                <li className="timeline-item">
-                  <h4 className="h4 timeline-item-title">
+                <li className={cn("timeline-item")}>
+                  <h4 className={cn("h4", "timeline-item-title")}>
                     Information Security Analyst Intern
                   </h4>
                   <h5>Cronytechnovest</h5>
                   <span>July, 2021 — September, 2021 (3 months)</span>
-                  <p className="timeline-text">
+                  <p className={cn("timeline-text")}>
                     Vulnerability Assessment and Penetration Testing(VAPT){" "}
                     <br />
                     Network penetration testing <br />
@@ -370,7 +378,7 @@ export default function Home() {
                 <a href="https://discover-jodhpur.netlify.app" target="_blank">
                   <div className="project-cover">
                     <img
-                      src="discoverJodhpurCover.png"
+                      src="./assets/images/discoverJodhpurCover.png"
                       alt="discover-jodhpur"
                       loading="lazy"
                     />
