@@ -2,6 +2,15 @@ import Head from "next/head";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import cn from "classnames";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronDown,
+  faEnvelope,
+  faCalendarDays,
+  faLocationDot,
+  faBookOpen,
+  faBriefcase,
+} from "@fortawesome/free-solid-svg-icons";
 
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
@@ -109,7 +118,7 @@ export default function Home() {
             </div>
             <button className="info_more-btn" data-sidebar-btn="">
               <span>Show Contacts </span>
-              <ion-icon name="chevron-down" />
+              <FontAwesomeIcon icon={faChevronDown} />
             </button>
           </div>
           <div className="sidebar-info_more">
@@ -117,7 +126,7 @@ export default function Home() {
             <ul className="contacts-list">
               <li className="contact-item">
                 <div className="icon-box">
-                  <ion-icon name="mail-outline" />
+                  <FontAwesomeIcon icon={faEnvelope} />
                 </div>
                 <div className="contact-info">
                   <p className="contact-title">Email</p>
@@ -128,7 +137,7 @@ export default function Home() {
               </li>
               <li className="contact-item">
                 <div className="icon-box">
-                  <ion-icon name="calendar-outline" />
+                  <FontAwesomeIcon icon={faCalendarDays} />
                 </div>
                 <div className="contact-info">
                   <p className="contact-title">Birthday</p>
@@ -137,7 +146,7 @@ export default function Home() {
               </li>
               <li className="contact-item">
                 <div className="icon-box">
-                  <ion-icon name="location-outline" />
+                  <FontAwesomeIcon icon={faLocationDot} />
                 </div>
                 <div className="contact-info">
                   <p className="contact-title">Location</p>
@@ -309,7 +318,7 @@ export default function Home() {
             <section className="timeline">
               <div className="title-wrapper">
                 <div className="icon-box">
-                  <ion-icon name="book-outline" />
+                  <FontAwesomeIcon icon={faBookOpen} />
                 </div>
                 <h3 className="h3">Education</h3>
               </div>
@@ -326,7 +335,7 @@ export default function Home() {
             <section className="timeline">
               <div className="title-wrapper">
                 <div className="icon-box">
-                  <ion-icon name="book-outline" />
+                  <FontAwesomeIcon icon={faBriefcase} />{" "}
                 </div>
                 <h3 className={cn("h3")}>Experience</h3>
               </div>
