@@ -508,8 +508,8 @@ export default function Home() {
                         Understanding grid-template area
                       </h4>
                       {/* <p class="blog-text">
-                Understanding box-Sizing and border-box
-              </p> */}
+                        Understanding box-Sizing and border-box
+                      </p> */}
                     </div>
                   </a>
                 </li>
