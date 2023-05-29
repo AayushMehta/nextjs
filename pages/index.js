@@ -49,6 +49,7 @@ export default function Home() {
           pageItem.classList.remove("active");
         }
       });
+      
 
       navigationLinks.forEach((linkItem) => {
         linkItem.classList.remove("active");
