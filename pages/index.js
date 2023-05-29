@@ -12,9 +12,9 @@ import {
   faBriefcase,
 } from "@fortawesome/free-solid-svg-icons";
 
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-const inter = Inter({ subsets: ["latin"] });
+// import { Inter } from "next/font/google";
+// import styles from "@/styles/Home.module.css";
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [activePage, setActivePage] = useState("");
@@ -49,7 +49,6 @@ export default function Home() {
           pageItem.classList.remove("active");
         }
       });
-      
 
       navigationLinks.forEach((linkItem) => {
         linkItem.classList.remove("active");
@@ -88,13 +87,7 @@ export default function Home() {
         href="/assets/images/logo-A - Edited.png"
         type="image/x-icon"
       />
-      {/*
-    - custom css link
-  */}
-      {/* <link rel="stylesheet" href="./assets/css/style.css" /> */}
-      {/*
-    - google font link
-  */}
+
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       <link
@@ -105,10 +98,12 @@ export default function Home() {
         <aside className="sidebar" data-sidebar="">
           <div className="sidebar-info">
             <figure className="avatar-box">
-              <img
-                src="/assets/images/aayush-avatar.png"
+              <Image
+                src="/aayush-avatar.png"
                 alt="Aayush Mehta"
-                width={80}
+                width={120}
+                height={120}
+                loading="lazy"
               />
             </figure>
             <div className="info-content">
@@ -229,7 +224,7 @@ export default function Home() {
             </header>
             <section className="about-text">
               <p>
-                I'm Frontend developer from Bengaluru, india, working on
+                I&apos;m Frontend developer from Bengaluru, india, working on
                 Freelance Projects. I enjoy turning complex problems into
                 simple, beautiful and intuitive designs.
               </p>
@@ -242,7 +237,7 @@ export default function Home() {
               </p>
             </section>
             <section className="service">
-              <h3 className="h3 service-title">What i'm doing</h3>
+              <h3 className="h3 service-title">What i&apos;m doing</h3>
               <ul className="service-list">
                 <li className="service-item">
                   <div className="service-icon-box">
@@ -387,30 +382,36 @@ export default function Home() {
               <div className="project-list">
                 <a href="https://discover-jodhpur.netlify.app" target="_blank">
                   <div className="project-cover">
-                    <img
-                      src="./assets/images/discoverJodhpurCover.png"
+                    <Image
+                      src="/discoverJodhpurCover.png"
                       alt="discover-jodhpur"
                       loading="lazy"
+                      width={160}
+                      height={100}
                     />
                     <h4>Discover Jodhpur</h4>
                   </div>
                 </a>
                 <a href="https://excrusion.netlify.app" target="_blank">
                   <div className="project-cover">
-                    <img
-                      src="./assets/images/excrusion-cover.png"
-                      alt="Excrusion"
+                    <Image
+                      src="/excrusion-cover.png"
+                      alt="discover-jodhpur"
                       loading="lazy"
+                      width={160}
+                      height={100}
                     />
                     <h4>Excrusion</h4>
                   </div>
                 </a>
                 <a href="https://healthy-omni-food.netlify.app" target="_blank">
                   <div className="project-cover">
-                    <img
-                      src="./assets/images/healthy-omni-food.png"
-                      alt="Omni Food"
+                    <Image
+                      src="/healthy-omni-food.png"
+                      alt="discover-jodhpur"
                       loading="lazy"
+                      width={160}
+                      height={100}
                     />
                     <h4>Omni Food</h4>
                   </div>
@@ -420,10 +421,12 @@ export default function Home() {
                   target="_blank"
                 >
                   <div className="project-cover">
-                    <img
-                      src="./assets/images/yoga-studio.png"
-                      alt="Yoga Studio"
+                    <Image
+                      src="/yoga-studio.png"
+                      alt="discover-jodhpur"
                       loading="lazy"
+                      width={160}
+                      height={100}
                     />
                     <h4>Yoga Studio</h4>
                   </div>

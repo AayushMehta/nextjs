@@ -1024,6 +1024,10 @@ main {
   .filter-select-box {
     display: none;
   }
+  .avatar-box img {
+    width: 120px;
+    height: 100px;
+  }
 }
 
 /**
@@ -1031,12 +1035,9 @@ main {
  */
 
 @media (min-width: 450px) {
-  /**
-   * client
-   */
-
-  .clients-item {
-    min-width: calc(33.33% - 10px);
+  .avatar-box img {
+    width: 120px;
+    height: 100px;
   }
 
   /**
@@ -1136,6 +1137,7 @@ main {
 
   .avatar-box img {
     width: 120px;
+    height: 100px;
   }
 
   .info-content .name {
@@ -1339,17 +1341,6 @@ main {
   /**
    * ABOUT
    */
-
-  /* testimonials modal */
-
-  .testimonials-modal {
-    gap: 35px;
-    max-width: 680px;
-  }
-
-  .modal-avatar-box img {
-    width: 80px;
-  }
 
   /**
    * PORTFOLIO
@@ -1603,7 +1594,8 @@ main {
   }
 
   .avatar-box img {
-    width: 150px;
+    width: 170px;
+    height: 150px;
   }
 
   .info-content .name {
